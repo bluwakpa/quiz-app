@@ -28,7 +28,6 @@ const STORE = {
       correctAnswer: 'Nexus'
     },
  
-
     {
       question: 'Which was the first computer virus?',
       answers: [
@@ -41,14 +40,14 @@ const STORE = {
     },
 
     {
-      question: 'Which programming language is exclusively used for artificial intelligence?',
+      question: "Who is considered the world's first computer programmer?",
       answers: [
-        'Prolog',
-        'C',
-        'Java',
-        'J2EE'
+        'Grace Hopper',
+        'Ada Lovelace',
+        'Jean Jennings Bartik',
+        'Frances Elizabeth “Betty" Holberton'
       ],
-      correctAnswer: 'Prolog'
+      correctAnswer: 'Ada Lovelace'
     },
 
     {
@@ -64,7 +63,7 @@ const STORE = {
 
 ],
 quizStarted: false,
-questionNumber: 0,
+currentQuestion: 0,
 score: 0
 };
 

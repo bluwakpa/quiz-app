@@ -48,28 +48,7 @@ function generateAnswersHtml() {
   });
   return answersHtml;
 }
-/**
- * Generates the HTML to display one question
- */
-function generateQuestionHtml() {
-  let currentQuestion = STORE.questions[STORE.currentQuestion];
-  return `
-    <form id="question-form" class="question-form">
-      <fieldset>
-        <div class="question">
-          <legend> ${currentQuestion.question}</legend>
-        </div>
-        <div class="options">
-          <div class="answers">
-            ${generateAnswersHtml()}
-          </div>
-        </div>
-        <button type="submit" id="submit-answer-btn" tabindex="5">Submit</button>
-        <button type="button" id="next-question-btn" tabindex="6"> Next &gt;></button>
-      </fieldset>
-    </form >
-  `;
-}
+
 
 /**
  * Generates the HTML for the results screen
@@ -223,4 +202,3 @@ function handleQuizApp() {
 }
 
 $(handleQuizApp);
-Save
