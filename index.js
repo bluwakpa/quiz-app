@@ -6,7 +6,7 @@
 function generateStartScreenHtml() {
   return `
     <div class="start-screen">
-      <p>This quiz will assess your basic knowledge of HTML, CSS and JavaScript.</p>
+      <p>This quiz will assess your basic knowledge of computer science</p>
       <button type="button" id="start">Start Quiz</button>
     </div>
   `;
