@@ -35,3 +35,15 @@ button {
 li {
   list-style: none;
 }
+
+.right-answer {
+  border: 1px;
+  border-color: black;
+  background-color: green;
+}
+
+.wrong-answer {
+  border: 1px;
+  border-color: black;
+  background-color: red;
+}

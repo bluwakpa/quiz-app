@@ -111,7 +111,7 @@ function generateFeedbackHTML(answerStatus) {
   }
   else if (answerStatus === 'incorrect') {
     html = `
-      <div class="wrong-answer">That is incorrect. The correct answer is ${correctAnswer}.</div>
+      <div class="wrong-answer">That is incorrect. <br></br> The correct answer is ${correctAnswer}.</div>
     `;
   }
   return html;
