@@ -149,6 +149,7 @@ function handleStartClick() {
   $('main').on('click', '#start', function (event) {
     STORE.quizStarted = true;
     render();
+    $('#next-question-btn').hide();
   });
 }
 
@@ -158,6 +159,7 @@ function handleStartClick() {
 function handleNextQuestionClick() {
   $('body').on('click', '#next-question-btn', (event) => {
     render();
+    $('#next-question-btn').hide();
   });
 }
 
