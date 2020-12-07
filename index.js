@@ -1,5 +1,3 @@
-/********** TEMPLATE GENERATION FUNCTIONS **********/
-
 /**
  * Generates HTML for the start screen
  */
@@ -28,10 +26,12 @@ function generateQuestionNumberAndScoreHtml() {
     </ul>
   `;
 }
+
 /**
  * Generates the list of possible answers for
  * one question
  */
+
 function generateAnswersHtml() {
   const answersArray = STORE.questions[STORE.currentQuestion].answers
   let answersHtml = '';
@@ -48,9 +48,11 @@ function generateAnswersHtml() {
   });
   return answersHtml;
 }
+
 /**
  * Generates the HTML to display one question
  */
+
 function generateQuestionHtml() {
   let currentQuestion = STORE.questions[STORE.currentQuestion];
   return `
@@ -74,6 +76,7 @@ function generateQuestionHtml() {
 /**
  * Generates the HTML for the results screen
  */
+
 function generateResultsScreen() {
   return `
     <div class="results">
@@ -84,7 +87,6 @@ function generateResultsScreen() {
               <legend>Your Score is: ${STORE.score}/${STORE.questions.length}</legend>
             </div>
           </div>
-        
           <div class="row">
             <div class="col-12">
               <button type="button" id="restart"> Restart Quiz </button>
@@ -101,6 +103,7 @@ function generateResultsScreen() {
  * @returns {string} - HTML providing the user with feedback 
  * regarding whether their answer was correct or incorrect.
  */
+
 function generateFeedbackHTML(answerStatus) {
   let correctAnswer = STORE.questions[STORE.currentQuestion].correctAnswer;
   let html = '';
@@ -123,6 +126,7 @@ function generateFeedbackHTML(answerStatus) {
  * All-purpose render function that will conditionally 
  * render the page based upon the state of the STORE.
  */
+
 function render() {
   let html = '';
 
@@ -145,6 +149,7 @@ function render() {
 /**
  * Handles a click of the quiz's start button
  */
+
 function handleStartClick() {
   $('main').on('click', '#start', function (event) {
     STORE.quizStarted = true;
@@ -156,6 +161,7 @@ function handleStartClick() {
 /**
  * Handles the click of the "next" button
  */
+
 function handleNextQuestionClick() {
   $('body').on('click', '#next-question-btn', (event) => {
     render();
@@ -166,6 +172,7 @@ function handleNextQuestionClick() {
 /**
  * Handles the submission of the question form
  */
+
 function handleQuestionFormSubmission() {
   $('body').on('submit', '#question-form', function (event) {
     event.preventDefault();
@@ -179,6 +186,7 @@ function handleQuestionFormSubmission() {
      * 
      * Example: #option-container-0
      */
+
     let optionContainerId = `#option-container-${currentQuestion.answers.findIndex(i => i === selectedOption)}`;
 
     if (selectedOption === currentQuestion.correctAnswer) {
@@ -200,9 +208,11 @@ function handleQuestionFormSubmission() {
 
   });
 }
+
 /**
  * Resets all values to prepare to restart quiz
  */
+
 function restartQuiz() {
   STORE.quizStarted = false;
   STORE.currentQuestion = 0;
